@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StackLayout 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:controls="clr-namespace:PrototypeControlsSample.Controls;"
+    Orientation="Horizontal"
+    x:Name="CheckboxControl"
+    x:Class="PrototypeControlsSample.Controls.Checkbox">
+   
+    <controls:ToggleButton 
+            x:Name="toggleButton"
+            CheckedImage="checked"
+            UnCheckedImage="unchecked"
+            Enabled="true"
+            Animate="false"
+            VerticalOptions="CenterAndExpand"
+            Command="{Binding Source={x:Reference CheckboxControl}, Path=CheckedCommand }" />
+
+    <Label x:Name="descriptionLabel" Text="{Binding Text}"
+           FontSize="Small" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" />
+    
+</StackLayout>

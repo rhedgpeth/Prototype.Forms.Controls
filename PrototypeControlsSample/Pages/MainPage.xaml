@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:PrototypeControlsSample" 
+    xmlns:controls="clr-namespace:PrototypeControlsSample.Controls;"
+    x:Class="PrototypeControlsSample.Pages.MainPage">
+    <StackLayout Margin="20,70,0,0">
+        
+       <controls:Checkbox Text="This is a single (unbound and unchecked) checkbox!" />
+        
+       <controls:Checkbox Text="{Binding CheckboxTitle}" IsChecked="{Binding IsChecked}" />
+        
+       <Label Text="{Binding ItemsSelectedDescription}" Margin="0,50,0,0" />
+        
+       <controls:CheckboxList ItemsSource="{Binding Items}" 
+                              SelectedItems="{Binding SelectedItems}" />
+        
+    </StackLayout>
+</ContentPage>

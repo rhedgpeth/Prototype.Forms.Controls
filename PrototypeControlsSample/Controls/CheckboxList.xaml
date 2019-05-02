@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:controls="clr-namespace:PrototypeControlsSample.Controls"
+    ItemTapped="Handle_ItemTapped"
+    ItemSelected="Handle_ItemSelected"
+    SeparatorVisibility="None"
+    HasUnevenRows="true"
+    VerticalOptions="Start"
+    HeightRequest="100"
+    x:Class="PrototypeControlsSample.Controls.CheckboxList">
+    <ListView.ItemTemplate>
+        <DataTemplate>
+            <ViewCell>
+                <controls:Checkbox Text="{Binding Description}" IsChecked="{Binding IsSelected}" 
+                                   IsEnabled="false" Margin="0,0,0,3" />
+            </ViewCell>
+        </DataTemplate>
+    </ListView.ItemTemplate>
+</ListView>
