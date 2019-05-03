@@ -6,7 +6,13 @@ This sample app contains a random mixture of Xamarin/Xamarin.Forms controls, vie
 1. [ToggleButton](#togglebutton)
 2. [Checkbox](#checkbox)
 3. [Checkbox List](#checkboxlist)
-4. [Expandable/Collapsible (Accordion) List](#expandable-collapsible-list)
+4. [Collapsible/Expandable (Accordion) List](#collapsible-expandable-list)
+5. [Editable Label](#editable-label)
+6. [ListView with TappedCommand](#listview-command)
+7. [ListView with Infinite Scroll](#listview-infinite-scroll)
+8. [RadioButton](#radiobutton)
+9. [RadioButtonList](#radiobuttonlist)
+10. [TabControl with Collapsible/Expandable capabilities](#tabcontrol)
 
 
 ## ToggleButton <a name="togglebutton"></a>
@@ -46,4 +52,30 @@ The `CheckboxList` control inherits from `Xamarin.Forms.ListView` and contains a
 
 The `CheckboxList` control also contains functionality for selecting/de-selecting all of the checkboxes in the list. (Documentation and samples coming soon for this).
 
-## Expandable/Collapsible (Accordion) List <a name="expandable-collapsible-list"></a>
+## Collapsible/Expandable (Accordion) List <a name="collapsible-expandable-list"></a>
+
+(Coming soon!)
+
+## Editable Label <a name="editable-label"></a>
+
+(Coming soon!)
+
+## ListView with Item Tapped Command <a name="listview-command"></a>
+
+(Coming soon!)
+
+## ListView with Infinite Scroll <a name="listview-infinite-scroll"></a>
+
+(Coming soon!)
+
+## RadioButton <a name="radiobutton"></a>
+
+(Coming soon!)
+
+## RadioButtonList <a name="radiobuttonlist"></a>
+
+(Coming soon!)
+
+## TabControl with Collapsible/Expandable capabilities <a name="tabcontrol"></a>
+
+(Coming soon!)
