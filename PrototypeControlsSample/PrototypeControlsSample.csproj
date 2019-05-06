@@ -19,11 +19,6 @@
     <Folder Include="ViewModels\" />
     <Folder Include="Pages\" />
     <Folder Include="Models\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Pages\MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
+    <Folder Include="Events\" />
   </ItemGroup>
 </Project>

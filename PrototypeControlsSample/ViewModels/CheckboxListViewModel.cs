@@ -5,9 +5,8 @@ using PrototypeControlsSample.Models;
 
 namespace PrototypeControlsSample.ViewModels
 {
-    public class MainViewModel : BaseNotify
+    public class CheckboxListViewModel : BaseNotify
     {
-
         ObservableCollection<SelectableItem> _items = new ObservableCollection<SelectableItem>();
         public ObservableCollection<SelectableItem> Items
         {
@@ -35,7 +34,7 @@ namespace PrototypeControlsSample.ViewModels
         }
 
 
-        public MainViewModel()
+        public CheckboxListViewModel()
         {
             for (int i = 0; i < 10; i++)
             {

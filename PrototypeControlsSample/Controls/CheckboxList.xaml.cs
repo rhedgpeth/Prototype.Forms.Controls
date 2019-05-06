@@ -6,7 +6,7 @@ using PrototypeControlsSample.Models;
 
 namespace PrototypeControlsSample.Controls
 {
-    public partial class CheckboxList : ListView
+    public partial class CheckboxList : Xamarin.Forms.ListView
     {
         public string ItemTypeDescription { get; set; }
 
@@ -18,6 +18,7 @@ namespace PrototypeControlsSample.Controls
                                         propertyChanged: HandleSelectedItemsPropertyChanged);
 
         List<SelectableItem> _selectedItems = new List<SelectableItem>();
+
         public List<SelectableItem> SelectedItems
         {
             get { return (List<SelectableItem>)GetValue(SelectedItemsProperty); }
@@ -42,8 +43,7 @@ namespace PrototypeControlsSample.Controls
         public static readonly BindableProperty SelectedItemsDescriptionProperty
                 = BindableProperty.Create(nameof(SelectedItemsDescription),
                                           typeof(string),
-                                        typeof(CheckboxList), default(string), BindingMode.TwoWay); //,
-                                                                                                    //propertyChanged: HandleItemSourcePropertyChanged);
+                                        typeof(CheckboxList), default(string), BindingMode.TwoWay); 
 
         public string SelectedItemsDescription
         {
@@ -74,7 +74,7 @@ namespace PrototypeControlsSample.Controls
 
         int _totalItemCount;
 
-        void Handle_ItemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
+        void Handle_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             SelectedItem = null;
         }

@@ -8,7 +8,9 @@ namespace PrototypeControlsSample
         {
             InitializeComponent();
 
-            MainPage = new Pages.MainPage();
+            //MainPage = new Pages.MainPage();
+
+            MainPage = new Pages.RootPage();
         }
     }
 }

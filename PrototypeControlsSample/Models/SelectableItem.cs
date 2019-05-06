@@ -1,6 +1,7 @@
 ﻿namespace PrototypeControlsSample.Models
 {
-    public class SelectableItem : BaseNotify
+    // An example class that implements ISelectableItem - this can be whatever you need though
+    public class SelectableItem : BaseNotify, ISelectableItem
     {
         public int Id { get; set; }
         public string Description { get; set; }

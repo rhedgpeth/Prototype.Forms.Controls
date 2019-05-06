@@ -140,4 +140,7 @@
     <BundleResource Include="Resources\unchecked%402x.png" />
     <BundleResource Include="Resources\unchecked%403x.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Renderers\" />
+  </ItemGroup>
 </Project>

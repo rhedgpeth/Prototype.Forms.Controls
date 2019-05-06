@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Grid 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+     x:Class="PrototypeControlsSample.Controls.EditableLabel">
+
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="25" />
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="35" />
+    </Grid.RowDefinitions>
+
+    <Label x:Name="label" Grid.Row="0" Grid.Column="0" FontSize="14" 
+           VerticalTextAlignment="Center" VerticalOptions="Center" Margin="7,0,0,0" />
+
+    <Entry x:Name="entry" Grid.Row="0" Grid.Column="0" FontSize="14" IsVisible="false">
+        <Entry.VerticalOptions>
+            <OnPlatform x:TypeArguments="LayoutOptions">
+                <On Platform="iOS" Value="Center" />
+                <On Platform="Android" Value="End" />
+            </OnPlatform>
+        </Entry.VerticalOptions>
+    </Entry>
+
+    <StackLayout Grid.Row="0" Grid.Column="1" VerticalOptions="Center">
+        <Image x:Name="imageEditIcon" Aspect="AspectFit">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="Handle_Tapped" NumberOfTapsRequired="1" />
+            </Image.GestureRecognizers>
+        </Image>
+    </StackLayout>
+    
+</Grid>
