@@ -76,7 +76,7 @@ The `CheckboxList` control inherits from `Xamarin.Forms.ListView` and contains a
 The `RadioButtonList` inherits from `StackLayout`, and contains a list of `RadioButton` controls. The `ItemsSource` property within the `RadioButtonList` expects `IEnumerable<string>`. The collection of strings is used to create the `RadioButton` items contained within the `RadioButtonList`.
 
 ```xml
-<controls:RadioButtonList ItemsSource="{Binding Items}"  />
+<controls:RadioButtonList ItemsSource="{Binding Items}" ItemSelectedCommand="{Binding ItemSelectedCommand}" />
 ```
 
 <img src="images/radiobuttonlist.gif" />

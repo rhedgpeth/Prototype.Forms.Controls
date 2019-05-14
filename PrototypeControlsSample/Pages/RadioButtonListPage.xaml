@@ -7,6 +7,6 @@
     Title="RadioButton List"
     ControlTemplate="{StaticResource BasicPageTemplate}">
     <ContentPage.Content>
-        <controls:RadioButtonList ItemsSource="{Binding Items}"  />
+        <controls:RadioButtonList ItemsSource="{Binding Items}" ItemSelectedCommand="{Binding ItemSelectedCommand}"  />
     </ContentPage.Content>
 </ContentPage>

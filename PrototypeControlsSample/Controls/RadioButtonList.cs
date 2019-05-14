@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Windows.Input;
 using PrototypeControlsSample.Events;
 using Xamarin.Forms;
 
@@ -28,6 +29,9 @@ namespace PrototypeControlsSample.Controls
                                                                                         BindingMode.TwoWay,
                                                                                         propertyChanged: OnSelectedIndexChanged);
 
+        public static readonly BindableProperty ItemSelectedCommandProperty =
+                                    BindableProperty.Create(nameof(ItemSelectedCommand), typeof(ICommand), typeof(ListView));
+
         public IEnumerable ItemsSource
         {
             get { return (IEnumerable)GetValue(ItemsSourceProperty); }
@@ -41,7 +45,13 @@ namespace PrototypeControlsSample.Controls
             set { SetValue(SelectedIndexProperty, value); }
         }
 
-        public event EventHandler<int> CheckedChanged;
+        public ICommand ItemSelectedCommand
+        {
+            get { return (ICommand)GetValue(ItemSelectedCommandProperty); }
+            set { SetValue(ItemSelectedCommandProperty, value); }
+        }
+
+        public event EventHandler<int> ItemSelected;
 
         static void OnItemsSourceChanged(BindableObject bindable, object oldValue, object newValue)
         {
@@ -92,10 +102,8 @@ namespace PrototypeControlsSample.Controls
                 }
                 else
                 {
-                    if (CheckedChanged != null)
-                    {
-                        CheckedChanged.Invoke(sender, rad.Id);
-                    }
+                    ItemSelected?.Invoke(sender, rad.Id);
+                    ItemSelectedCommand?.Execute(rad.Id);
                 }
             }
         }
