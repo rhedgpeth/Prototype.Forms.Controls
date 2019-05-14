@@ -24,6 +24,9 @@ namespace PrototypeControlsSample.Controls
                                                                                         default(bool), BindingMode.TwoWay,
                                                                                         propertyChanged: HandleCheckedPropertyChanged);
 
+        public static readonly BindableProperty TextColorProperty =
+            BindableProperty.Create("TextColor", typeof(Color), typeof(RadioButton), Color.Black);
+
         static void HandleCheckedPropertyChanged(BindableObject bindable, object oldValue, object newValue)
         {
             var cb = bindable as RadioButton;
@@ -48,6 +51,12 @@ namespace PrototypeControlsSample.Controls
         {
             get => (string)GetValue(TextProperty);
             set => SetValue(TextProperty, value);
+        }
+
+        public Color TextColor
+        {
+            get { return (Color)GetValue(TextColorProperty); }
+            set { SetValue(TextColorProperty, value); }
         }
     }
 }

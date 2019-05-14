@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
+﻿using PrototypeControlsSample.ViewModels;
 using Xamarin.Forms;
 
 namespace PrototypeControlsSample.Pages
@@ -10,6 +8,7 @@ namespace PrototypeControlsSample.Pages
         public RadioButtonListPage()
         {
             InitializeComponent();
+            BindingContext = new RadioButtonListViewModel();
         }
     }
 }

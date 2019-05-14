@@ -4,14 +4,12 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:controls="clr-namespace:PrototypeControlsSample.Controls;"
     x:Class="PrototypeControlsSample.Pages.CheckboxPage"
-    Title="Checkbox">
+    Title="Checkbox"
+    ControlTemplate="{StaticResource BasicPageTemplate}">
     <ContentPage.Content>
-        <StackLayout Margin="20,70,0,0">
-            
+        <StackLayout>
            <controls:Checkbox Text="This is a single (unbound and unchecked) checkbox!" />
-            
            <controls:Checkbox Text="{Binding CheckboxTitle}" IsChecked="{Binding IsChecked}" />
-            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

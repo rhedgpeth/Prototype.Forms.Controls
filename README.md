@@ -4,15 +4,14 @@ This sample app contains a random mixture of Xamarin/Xamarin.Forms controls, vie
 
 # Table of Contents
 1. [ToggleButton](#togglebutton)
-2. [Checkbox](#checkbox)
-3. [Checkbox List](#checkboxlist)
+2. [Checkbox](#checkbox) <img src="images/new_icon.png" /> 
+3. [Checkbox List](#checkboxlist) <img src="images/new_icon.png" /> 
 4. [Collapsible/Expandable (Accordion) List](#collapsible-expandable-list)
 5. [Editable Label](#editable-label)
 6. [ListView with TappedCommand](#listview-command)
 7. [ListView with Infinite Scroll](#listview-infinite-scroll)
-8. [RadioButton](#radiobutton)
-9. [RadioButtonList](#radiobuttonlist)
-10. [TabControl with Collapsible/Expandable capabilities](#tabcontrol)
+8. [RadioButtonList](#radiobuttonlist) <img src="images/new_icon.png" /> 
+9. [TabControl with Collapsible/Expandable capabilities](#tabcontrol)  
 
 
 ## ToggleButton <a name="togglebutton"></a>
@@ -39,6 +38,8 @@ The `Checkbox` control is essentially a `StackLayout` that contains a `ToggleBut
                    CheckedCommand="{Binding OnCheckedCommand}" />
 ```
 
+<img src="images/checkbox.gif" />
+
 **Coming Soon**: *Overridable SkiaSharp (default) implementations for Checked/Unchecked states in place of where images are currently required. This will eliminate the need for any platform additions (images).*
 
 ## CheckboxList <a name="checkboxlist"></a>
@@ -50,7 +51,9 @@ The `CheckboxList` control inherits from `Xamarin.Forms.ListView` and contains a
                        SelectedItems="{Binding SelectedItems}" />
 ```
 
-The `CheckboxList` control also contains functionality for selecting/de-selecting all of the checkboxes in the list. (Documentation and samples coming soon for this).
+<img src="images/checkboxlist.gif" />
+
+**Note:** The `CheckboxList` control also contains functionality for selecting/de-selecting all of the checkboxes in the list. (Documentation and samples coming soon for this).
 
 ## Collapsible/Expandable (Accordion) List <a name="collapsible-expandable-list"></a>
 
@@ -68,13 +71,15 @@ The `CheckboxList` control also contains functionality for selecting/de-selectin
 
 (Coming soon!)
 
-## RadioButton <a name="radiobutton"></a>
-
-(Coming soon!)
-
 ## RadioButtonList <a name="radiobuttonlist"></a>
 
-(Coming soon!)
+The `RadioButtonList` inherits from `StackLayout`, and contains a list of `RadioButton` controls. The `ItemsSource` property within the `RadioButtonList` expects `IEnumerable<string>`. The collection of strings is used to create the `RadioButton` items contained within the `RadioButtonList`.
+
+<img src="images/radiobuttonlist.gif" />
+
+**Note:** The `RadioButton` control requires custom renderering within the iOS and Android projects.
+
+**Coming Soon:** I will be expanding the functionality of the to allow for more options (i.e. pre-selecting radio button items, custom selected/unselected formatting, etc.)
 
 ## TabControl with Collapsible/Expandable capabilities <a name="tabcontrol"></a>
 

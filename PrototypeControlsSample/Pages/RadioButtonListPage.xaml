@@ -2,8 +2,11 @@
 <ContentPage 
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:controls="clr-namespace:PrototypeControlsSample.Controls;"
     x:Class="PrototypeControlsSample.Pages.RadioButtonListPage"
-    Title="RadioButton List">
+    Title="RadioButton List"
+    ControlTemplate="{StaticResource BasicPageTemplate}">
     <ContentPage.Content>
+        <controls:RadioButtonList ItemsSource="{Binding Items}"  />
     </ContentPage.Content>
 </ContentPage>

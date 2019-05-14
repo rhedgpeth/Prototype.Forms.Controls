@@ -69,6 +69,8 @@
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Renderers\RadioButtonRenderer.cs" />
+    <Compile Include="Controls\RadioButtonView.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -139,8 +141,11 @@
     <BundleResource Include="Resources\checked%403x.png" />
     <BundleResource Include="Resources\unchecked%402x.png" />
     <BundleResource Include="Resources\unchecked%403x.png" />
+    <BundleResource Include="Resources\radio_selected%403x.png" />
+    <BundleResource Include="Resources\radio_unselected%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Renderers\" />
+    <Folder Include="Controls\" />
   </ItemGroup>
 </Project>
